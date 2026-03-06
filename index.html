@@ -3,10 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/grid.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
     <title>Responsive Image Sizing Chiikawa Character Intros</title>
 </head>
 <body>
     <section class="grid-con center-grid-con">
+        <h1 class="col-span-full m-col-start-4 m-col-end-10 l-col-start-5 l-col-end-10">Responsive Image Strategies</h1>
+        <div class="col-span-full" id="chiikawa-hero">
+            <picture>
+    <img
+    sizes="(max-width: 1080px) 100vw, 1080px"
+    srcset="
+    images/chiikawa_anime_small.jpg 200w,
+    images/chiikawa_anime_medium.jpg 545w,
+    images/chiikawa_anime_large.jpg 1080w"
+src="images/chiikawa_anime_large.jpg"
+alt="Chiikawa Anime Poster">
+</picture>
+        </div>
+
+        <div class="col-span-full" id="srcset-element">
+            <h2>Srcset Element</h2>
+            <p>By using the srcset element we can use a method called resolution switching, the browser is able to make the decision based on the information presented to it within our srcset and sizes attribute to select the most fitting img linked within it to display to the viewport dependent on size. Resolution swapping is having multiple different pictures at different resolutions depending on viewport sizes and the browser will choose one of those resolutions that best fit the task based on the information it's been provided.</p><br>
+            <img
+    sizes="(max-width: 1080px) 100vw, 1080px"
+    srcset="
+    images/chiikawa_scale_small.jpg 200w,
+    images/chiikawa_scale_medium.jpg 545w,
+    images/chiikawa_scale_large.jpg 1080w"
+    src="images/chiikawa_scale_large.jpg"
+    alt="Chiikawa Character">
+        </div>
+
+
+        <div class="col-span-full" id="picture-element">
+            <h2>Picture Element</h2>
+            <p>Using the picture element we are able to follow a more art direction based design by swapping out our pictures from portrait to landscape the bigger/smaller the browser gets. The Picture element is great for an art based direction as it contains one or more source elements that will refer to the media attribute of the source element and find a picture the browser decides to be suitable for the viewport based on the screensize. Picture is great to use when you're not sure if the browser supports a specific method as it will use the first format it can find to display your picture for you.</p><br>
+            <picture>
+    <img
+    sizes="(max-width: 1020px) 100vw, 1020px"
+    srcset="
+    images/hachiware_scale_small.jpg 200w,
+    images/hachiware_scale_medium.jpg 661w,
+    images/hachiware_scale_large.jpg 1020w"
+    src="images/hachiware_scale_large.jpg"
+    alt="Hachiware Character">
+    </picture>
+        </div>
+
+        <div class="col-span-full">
+            <h2>CSS Background-img Element</h2>
+            <p>The CSS Background-img Element is a great for creating hero images and other decorative related purposes. By having your css set the div to have max-width: 100% and your height auto'd out, it means that whatever image you have placed within the div or whatever youve targeted within your css, it will make your image responsively scale and never resize itself outside of it's original resolution/width. By using the background-img element you can implement plenty of different decorative decisions and easily use properties such as relative or absolute to size your image, or you can even use it for a nested grid to lay content atop of your image.</p>
+            <div id="background-img"></div>
+        </div>
 
     </section>
     
