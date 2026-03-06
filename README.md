@@ -1,4 +1,4 @@
-# Responsive Image Practice Chiikawa Characters Intro
+# Responsive Image Practice Chiikawa Characters Example
 This 1056 Assignment where we practice creating responsive images using the three different techniques we learned of in class (picture, srcset and background img) to make a fully responsive website where the images also change depending on browser size.
 ## Installation
 No installation needed, just drag the html files into your preferred browser
